@@ -5,14 +5,18 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDX1k8HwAIab-0pxlEqMI14mP7wyUa-BRk',
+      libraries: ['places', 'drawing', 'geometry'],
+    })
   ],
   declarations: [HomePage]
 })
